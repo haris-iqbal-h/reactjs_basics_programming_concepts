@@ -1,8 +1,9 @@
 import React from 'react'
+import Hello from ''
 
 const Home = () => {
     return (
-        <div>Home</div>
+        <Hello title='This is header components'/>
     )
 }
 
