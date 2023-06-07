@@ -10,7 +10,12 @@ React-Basic
     props drilling
     context API useContext()
     hooks (useState, useEffect, useContext, useReducer)
-
+	conditional rendering
+	list and keys
+	forms
+	react router
+	High Order Components
+	React Redux
 
 ReactConcepts
 
