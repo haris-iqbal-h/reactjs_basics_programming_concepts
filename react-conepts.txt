@@ -8,3 +8,12 @@ React-Basic
 	spread and rest operator
 	destructuring
     props drilling
+    context API useContext()
+    hooks (useState, useEffect, useContext, useReducer)
+
+
+ReactConcepts
+
+hoisting
+props drilling
+lifting up state
