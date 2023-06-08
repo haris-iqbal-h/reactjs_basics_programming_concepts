@@ -6,6 +6,9 @@ import ModeToggler from '../components/ModeToggler'
 import MealList from '../components/MealList'
 import Counter from '../components/Counter'
 import MealsProvider from '../components/MealsProvider'
+import WorkDay from '../components/WorkDay'
+import WeekEnd from '../components/WeekEnd'
+import { Link } from 'react-router-dom'
 
 
 const reducer=(state,action)=>{
@@ -14,6 +17,8 @@ const reducer=(state,action)=>{
     return new Error()
 }
 const Home = () => {
+
+    const day=new Date().getDate()
 
     const initialState={money:100}
     const [state,dispatch]=useReducer(reducer,initialState)
@@ -33,6 +38,12 @@ const Home = () => {
 
     return (
         <>
+        <div style={{margin:"10px",padding:"5px"}}>
+            <Link to='/' className='card'>  Home</Link>
+            <Link to='/about-us' className='card'>  About Us</Link>
+            <Link to='/assets' className='card'>  Assets</Link>
+            <Link to='/calculator' className='card'>  Calculator</Link>
+        </div>
             {/* Structure and Components */}
             {/* Props handling */}
             {/* <div>
@@ -121,6 +132,10 @@ const Home = () => {
                 <button onClick={()=>dispatch({type:'ride'})}>A New Customer</button>
                 <button onClick={()=>dispatch({type:'fuel'})}>Refill the tank</button>
             </div>
+
+            {/* Conditional redneroing */}
+            <h3>Conditional Rendering</h3>
+            {day>=1 && day<=5 ? <WorkDay />:<WeekEnd/>}
         </>
     )
 }
