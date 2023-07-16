@@ -18,6 +18,7 @@ const App = () => {
                     <Route path='/calculator' element={<Calculator />}/>
                     <Route path='/search/:id' element={<Search/>}/>
                     <Route path='*' element={<NotFoundPage/>}/>
+
                 </Routes>
             </Router>
         </>

@@ -8,7 +8,7 @@ import Counter from '../components/Counter'
 import MealsProvider from '../components/MealsProvider'
 import WorkDay from '../components/WorkDay'
 import WeekEnd from '../components/WeekEnd'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 
 const reducer=(state,action)=>{
@@ -38,12 +38,12 @@ const Home = () => {
 
     return (
         <>
-        <div style={{margin:"10px",padding:"5px"}}>
-            <Link to='/' className='card'>  Home</Link>
-            <Link to='/about-us' className='card'>  About Us</Link>
-            <Link to='/assets' className='card'>  Assets</Link>
-            <Link to='/calculator' className='card'>  Calculator</Link>
-        </div>
+        <nav>
+            <NavLink to='/' className='card'>  Home</NavLink>
+            <NavLink to='/about-us' className='card'>  About Us</NavLink>
+            <NavLink to='/assets' className='card'>  Assets</NavLink>
+            <NavLink to='/calculator' className='card'>  Calculator</NavLink>
+        </nav>
             {/* Structure and Components */}
             {/* Props handling */}
             {/* <div>
